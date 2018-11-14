@@ -1,3 +1,23 @@
 INSERT INTO users values (1, 'Bob', 'Public');
 INSERT INTO users values (2, 'Rony', 'Accountant');
 INSERT INTO users values (3, 'Steven', 'Admin');
+
+INSERT INTO books values (1,'Description of this book.', 5.27, 'Book');
+INSERT INTO books values (2,'Description of this book.', 5.27, 'Book1');
+INSERT INTO books values (3,'Description of this book.', 5.27, 'Book2');
+INSERT INTO books values (4,'Description of this book.', 5.27, 'Book3');
+INSERT INTO books values (5,'Description of this book.', 5.27, 'Book4');
+INSERT INTO books values (6,'Description of this book.', 5.27, 'Book5');
+INSERT INTO books values (7,'Description of this book.', 5.27, 'Book6');
+INSERT INTO books values (8,'Description of this book.', 5.27, 'Book7');
+INSERT INTO books values (9,'Description of this book.', 5.27, 'Book8');
+INSERT INTO books values (10,'Description of this book.', 5.27, 'Book9');
+INSERT INTO books values (11,'Description of this book.', 5.27, 'Book10');
+INSERT INTO books values (12,'Description of this book.', 5.27, 'Book11');
+INSERT INTO books values (13,'Description of this book.', 5.27, 'Book12');
+INSERT INTO books values (14,'Description of this book.', 5.27, 'Book13');
+INSERT INTO books values (15,'Description of this book.', 5.27, 'Book14');
+INSERT INTO books values (16,'Description of this book.', 5.27, 'Book15');
+INSERT INTO books values (17,'Description of this book.', 5.27, 'Book16');
+INSERT INTO books values (18,'Description of this book.', 5.27, 'Book17');
+INSERT INTO books values (19,'Description of this book.', 5.27, 'Book18');
