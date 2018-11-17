@@ -1,23 +1,23 @@
 package com.adyt.xacml.example.xacml.controller;
 
-import com.adyt.xacml.example.xacml.service.DataService;
+import com.adyt.xacml.example.xacml.service.BookService;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("/data")
-public class DataController {
+@RestController("/books")
+public class BookController {
 
-  private final DataService dataService;
+  private final BookService bookService;
 
-  public DataController(DataService dataService) {
-    this.dataService = dataService;
+  public BookController(BookService bookService) {
+    this.bookService = bookService;
   }
 
   @GetMapping
   public ResponseEntity<?> getData(HttpServletRequest request) {
-    return dataService.getData(request);
+    return bookService.getBooks(request);
   }
 
 }

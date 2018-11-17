@@ -3,7 +3,7 @@ package com.adyt.xacml.example.xacml.service;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
 
-public interface DataService {
+public interface BookService {
 
-  ResponseEntity<?> getData(HttpServletRequest request);
+  ResponseEntity<?> getBooks(HttpServletRequest request);
 }

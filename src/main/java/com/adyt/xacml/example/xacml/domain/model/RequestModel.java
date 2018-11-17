@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 public class RequestModel {
 
   private String action;
-  private String subject;
+  private Long subjectId;
   private String resource;
 
 }
