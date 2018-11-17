@@ -1,5 +1,5 @@
 <Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" PolicyId="Policy2"
-        RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides"
+        RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-unless-permit"
         Version="1.0">
     <Target>
         <AnyOf>
@@ -13,7 +13,7 @@
             </AllOf>
         </AnyOf>
     </Target>
-    <Rule Effect="Deny" RuleId="Rule-1">
+    <Rule Effect="Permit" RuleId="CanOnlyReadFromBooks">
         <Target>
             <AnyOf>
                 <AllOf>
@@ -27,27 +27,34 @@
             </AnyOf>
         </Target>
         <Condition>
-            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
-                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
-                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">write</AttributeValue>
-                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">delete</AttributeValue>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-bag">
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue>
+                    </Apply>
+                    <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
+                                         Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                                         DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
                 </Apply>
-                <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id"
-                                     Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
-                                     DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-greater-than-or-equal">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-one-and-only">
+                            <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:environment:current-time"
+                                                 Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                                                 DataType="http://www.w3.org/2001/XMLSchema#time" MustBePresent="true"/>
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#time">09:00:00</AttributeValue>
+                    </Apply>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-less-than-or-equal">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-one-and-only">
+                            <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:environment:current-time"
+                                                 Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                                                 DataType="http://www.w3.org/2001/XMLSchema#time" MustBePresent="true"/>
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#time">16:00:00</AttributeValue>
+                    </Apply>
+                </Apply>
             </Apply>
         </Condition>
-        <AdviceExpressions>
-            <AdviceExpression AdviceId="deny-liquor-medicine-advice" AppliesTo="Deny">
-                <AttributeAssignmentExpression
-                        AttributeId="urn:oasis:names:tc:xacml:2.0:example:attribute:text">
-                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">You are not allowed to
-                        do more than $1000 purchase
-                        from KMarket on-line trading system
-                    </AttributeValue>
-                </AttributeAssignmentExpression>
-            </AdviceExpression>
-        </AdviceExpressions>
     </Rule>
-    <Rule Effect="Permit" RuleId="Permit-Rule"/>
 </Policy>
