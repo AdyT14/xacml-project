@@ -6,6 +6,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import lombok.Data;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity(name = "books")
 @Data
 public class Book {
@@ -19,5 +22,14 @@ public class Book {
   private Double price;
 
   private String title;
+
+  public static Set<String> getFields(){
+    Set<String> fields = new HashSet<>();
+    fields.add("description");
+    fields.add("id");
+    fields.add("price");
+    fields.add("title");
+    return fields;
+  }
 
 }

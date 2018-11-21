@@ -1,9 +1,12 @@
 package com.adyt.xacml.example.xacml.service;
 
-import javax.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
+
+import javax.servlet.http.HttpServletRequest;
 
 public interface BookService {
 
-  ResponseEntity<?> getBooks(HttpServletRequest request);
+    ResponseEntity<?> getBooks(HttpServletRequest request);
+
+    ResponseEntity<?> getBooksByField(HttpServletRequest request);
 }

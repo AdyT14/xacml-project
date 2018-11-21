@@ -7,7 +7,6 @@ import org.w3c.dom.Element;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.ByteArrayInputStream;
-import java.io.IOException;
 
 @Component
 public class XacmlParser {
@@ -16,7 +15,7 @@ public class XacmlParser {
     }
 
     public static String createXACMLRequest(RequestModel requestModel) {
-        return
+        String xacml =
                 "<Request xmlns=\"urn:oasis:names:tc:xacml:3.0:core:schema:wd-17\" "
                         + "CombinedDecision=\"false\" ReturnPolicyIdList=\"false\">\n" +
                         "<Attributes "
@@ -48,8 +47,17 @@ public class XacmlParser {
                         requestModel.getResource()
                         + "</AttributeValue>\n" +
                         "</Attribute>\n" +
-                        "</Attributes>\n" +
-                        "</Request>";
+                        "</Attributes>\n";
+
+        for (String field : requestModel.getFields()) {
+            xacml += "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:field\">\n" +
+                    "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:resource:resource-id\" IncludeInResult=\"true\">\n" +
+                    "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">" + field + "</AttributeValue>\n" +
+                    "</Attribute>\n" +
+                    "</Attributes>\n";
+        }
+
+        return xacml + "</Request>";
     }
 
     /**
@@ -66,7 +74,7 @@ public class XacmlParser {
         dbf = DocumentBuilderFactory.newInstance();
         dbf.setNamespaceAware(true);
 
-        try (ByteArrayInputStream inputStream = new ByteArrayInputStream(response.getBytes())){
+        try (ByteArrayInputStream inputStream = new ByteArrayInputStream(response.getBytes())) {
             doc = dbf.newDocumentBuilder().parse(inputStream);
         } catch (Exception e) {
             throw new RuntimeException("DOM of request element can not be created from String");

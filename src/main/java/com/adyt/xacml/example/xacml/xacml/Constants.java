@@ -13,5 +13,6 @@ public class Constants {
     public static final String ACTION_DELETE = "delete";
 
     public static final String RESOURCE_BOOK = "book";
+    public static final String RESOURCE_BOOK_BY_FIELD = "book_field";
 
 }

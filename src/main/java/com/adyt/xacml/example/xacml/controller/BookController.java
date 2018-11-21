@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("/books")
+@RestController
 public class BookController {
 
   private final BookService bookService;
@@ -15,9 +15,14 @@ public class BookController {
     this.bookService = bookService;
   }
 
-  @GetMapping
+  @GetMapping("/books")
   public ResponseEntity<?> getData(HttpServletRequest request) {
     return bookService.getBooks(request);
+  }
+
+  @GetMapping("/byfield")
+  public ResponseEntity<?> getDataByField(HttpServletRequest request){
+    return bookService.getBooksByField(request);
   }
 
 }
