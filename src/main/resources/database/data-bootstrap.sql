@@ -1,6 +1,6 @@
-INSERT INTO users values (1, 'Group1', 'Bob', 'Public');
-INSERT INTO users values (2, 'Group2', 'Rony', 'Admin');
-INSERT INTO users values (3, 'Group3', 'Steven', 'CEO');
+INSERT INTO users values (1, 'Bob', 'Public');
+INSERT INTO users values (2, 'Rony', 'Admin');
+INSERT INTO users values (3, 'Steven', 'CEO');
 
 INSERT INTO books values (1,'Description of this book.', 5.27, 'Book');
 INSERT INTO books values (2,'Description of this book.', 5.27, 'Book1');

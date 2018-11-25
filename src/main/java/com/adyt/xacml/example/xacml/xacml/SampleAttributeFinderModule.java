@@ -43,14 +43,12 @@ public class SampleAttributeFinderModule extends AttributeFinderModule {
     public Set getSupportedIds() {
         Set<String> ids = new HashSet<>();
         ids.add("http://xacml-example.com/id/role");
-        ids.add("http://xacml-example.com/id/group");
         return ids;
     }
 
     @Override
     public EvaluationResult findAttribute(URI attributeType, URI attributeId, String issuer, URI category, EvaluationCtx context) {
         String roleName = null;
-        String groupName = null;
         List<AttributeValue> attributeValues = new ArrayList<>();
         EvaluationResult result = context.getAttribute(attributeType, defaultSubjectId, issuer, category);
         if(result != null && result.getAttributeValue() != null && result.getAttributeValue().isBag()){
@@ -58,14 +56,10 @@ public class SampleAttributeFinderModule extends AttributeFinderModule {
             if(bagAttribute.size() > 0){
                 String userId = ((AttributeValue) bagAttribute.iterator().next()).encode();
                 roleName = this.findRole(Long.valueOf(userId));
-                groupName = this.findGroup(Long.valueOf(userId));
             }
         }
         if(roleName != null){
             attributeValues.add(new StringAttribute(roleName));
-        }
-        if(groupName != null){
-            attributeValues.add(new StringAttribute(groupName));
         }
         return new EvaluationResult(new BagAttribute(attributeType, attributeValues));
     }
@@ -74,12 +68,6 @@ public class SampleAttributeFinderModule extends AttributeFinderModule {
     private String findRole(Long userId) {
         return userRepository.findById(userId).map(User::getRole).orElse(null);
     }
-
-    private String findGroup(Long userId) {
-        return userRepository.findById(userId).map(User::getGroupy).orElse(null);
-    }
-
-
 
     @Override
     public boolean isDesignatorSupported() {

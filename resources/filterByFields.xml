@@ -23,24 +23,24 @@
             <AnyOf>
                 <AllOf>
                     <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Group1</AttributeValue>
-                        <AttributeDesignator AttributeId="http://xacml-example.com/id/group"
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Public</AttributeValue>
+                        <AttributeDesignator AttributeId="http://xacml-example.com/id/role"
                                              Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
                                              DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
                     </Match>
                 </AllOf>
                 <AllOf>
                     <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Group2</AttributeValue>
-                        <AttributeDesignator AttributeId="http://xacml-example.com/id/group"
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Admin</AttributeValue>
+                        <AttributeDesignator AttributeId="http://xacml-example.com/id/role"
                                              Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
                                              DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
                     </Match>
                 </AllOf>
                 <AllOf>
                     <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Group3</AttributeValue>
-                        <AttributeDesignator AttributeId="http://xacml-example.com/id/group"
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">CEO</AttributeValue>
+                        <AttributeDesignator AttributeId="http://xacml-example.com/id/role"
                                              Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
                                              DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
                     </Match>
@@ -63,16 +63,16 @@
             <AnyOf>
                 <AllOf>
                     <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Group2</AttributeValue>
-                        <AttributeDesignator AttributeId="http://xacml-example.com/id/group"
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Admin</AttributeValue>
+                        <AttributeDesignator AttributeId="http://xacml-example.com/id/role"
                                              Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
                                              DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
                     </Match>
                 </AllOf>
                 <AllOf>
                     <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Group3</AttributeValue>
-                        <AttributeDesignator AttributeId="http://xacml-example.com/id/group"
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">CEO</AttributeValue>
+                        <AttributeDesignator AttributeId="http://xacml-example.com/id/role"
                                              Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
                                              DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
                     </Match>
@@ -96,8 +96,8 @@
             <AnyOf>
                 <AllOf>
                     <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
-                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Group3</AttributeValue>
-                        <AttributeDesignator AttributeId="http://xacml-example.com/id/group"
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">CEO</AttributeValue>
+                        <AttributeDesignator AttributeId="http://xacml-example.com/id/role"
                                              Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject"
                                              DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="true"/>
                     </Match>
