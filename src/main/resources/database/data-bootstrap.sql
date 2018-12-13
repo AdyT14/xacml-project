@@ -2,22 +2,36 @@ INSERT INTO users values (1, 'Bob', 'Public');
 INSERT INTO users values (2, 'Rony', 'Admin');
 INSERT INTO users values (3, 'Steven', 'CEO');
 
-INSERT INTO books values (1,'Description of this book.', 5.27, 'Book');
-INSERT INTO books values (2,'Description of this book.', 5.27, 'Book1');
-INSERT INTO books values (3,'Description of this book.', 5.27, 'Book2');
-INSERT INTO books values (4,'Description of this book.', 5.27, 'Book3');
-INSERT INTO books values (5,'Description of this book.', 5.27, 'Book4');
-INSERT INTO books values (6,'Description of this book.', 5.27, 'Book5');
-INSERT INTO books values (7,'Description of this book.', 5.27, 'Book6');
-INSERT INTO books values (8,'Description of this book.', 5.27, 'Book7');
-INSERT INTO books values (9,'Description of this book.', 5.27, 'Book8');
-INSERT INTO books values (10,'Description of this book.', 5.27, 'Book9');
-INSERT INTO books values (11,'Description of this book.', 5.27, 'Book10');
-INSERT INTO books values (12,'Description of this book.', 5.27, 'Book11');
-INSERT INTO books values (13,'Description of this book.', 5.27, 'Book12');
-INSERT INTO books values (14,'Description of this book.', 5.27, 'Book13');
-INSERT INTO books values (15,'Description of this book.', 5.27, 'Book14');
-INSERT INTO books values (16,'Description of this book.', 5.27, 'Book15');
-INSERT INTO books values (17,'Description of this book.', 5.27, 'Book16');
-INSERT INTO books values (18,'Description of this book.', 5.27, 'Book17');
-INSERT INTO books values (19,'Description of this book.', 5.27, 'Book18');
+INSERT INTO books values (1,'The Philosopher''s Stone was an artificial, rufescent stone with magical properties. It could be used to create the Elixir of Life, which extended the drinker''s lifespan, as well as transform any metal into pure gold. The Stone was created by the famed alchemist Nicolas Flamel.
+
+During 1991-1992 school year Lord Voldemort made attempts to steal the Stone for his own purposes. The final and almost successful attempt broke out in a skirmish for possession of the Stone. Voldemort was foiled by eleven year old Harry Potter and his return to power was delayed.', 5.1, 'Harry Potter and the Philosopher''s Stone');
+INSERT INTO books values (2,'Ever since Harry Potter had come home for the summer, the Dursleys had been so mean and hideous that all Harry wanted was to get back to the Hogwarts School of Witchcraft and Wizardry. But just as he is packing his bags, Harry receives a warning from a strange impish creature who says that if Harry returns to Hogwarts, disaster will strike.
+
+And strike it does. For in Harry''s second year at Hogwarts, fresh torments and horrors arise, including an outrageously stuck-up new professor and a spirit who haunts the girl''s bathroom. But then the real trouble begins - something is attacking Hogwarts students, turning them into stone. Could it be Draco Malfoy, a more poisonous rival than ever? Could it possibly be Hagrid, whose mysterious past reveals dark secrets? Or could it be the one everyone at Hogwarts most suspects ... Harry Potter himself!', 5.4, 'Harry Potter and the Chamber of Secrets');
+INSERT INTO books values (3,'Geralt the Witcher-revered and hated-holds the line against the monsters plaguing humanity in this NYT bestselling series that inspired the blockbuster Witcher videogames. Soon to be a major Netflix series.
+
+For over a century, humans, dwarves, gnomes, and elves have lived together in relative peace. But times have changed, the uneasy peace is over, and now the races are fighting once again. The only good elf, it seems, is a dead elf.
+
+Geralt of Rivia, the cunning assassin known as The Witcher, has been waiting for the birth of a prophesied child. This child has the power to change the world - for good, or for evil.
+
+As the threat of war hangs over the land and the child is hunted for her extraordinary powers, it will become Geralt''s responsibility to protect them all - and the Witcher never accepts defeat.
+
+Blood of Elves is the first full-length Witcher novel, and the perfect follow up if you''ve read The Last Wish collection.', 7.2, 'Blood of Elves');
+INSERT INTO books values (4,'Geralt is a witcher: guardian of the innocent; protector of those in need; a defender, in dark times, against some of the most frightening creatures of myth and legend. His task, now, is to protect Ciri. A child of prophecy, she will have the power to change the world for good or for ill -- but only if she lives to use it.
+
+A coup threatens the Wizard''s Guild.
+War breaks out across the lands.
+A serious injury leaves Geralt fighting for his life...
+... and Ciri, in whose hands the world''s fate rests, has vanished...
+
+The Witcher returns in this sequel to Blood of Elves.', 6.2, 'The Time of Contempt');
+INSERT INTO books values (5,'Harry Potter is lucky to reach the age of thirteen, since he has already survived the murderous attacks of the feared Dark Lord on more than one occasion. But his hopes for a quiet term concentrating on Quidditch are dashed when a maniacal mass-murderer escapes from Azkaban, pursued by the soul-sucking Dementors who guard the prison. It''s assumed that Hogwarts is the safest place for Harry to be. But is it a coincidence that he can feel eyes watching him in the dark, and should he be taking Professor Trelawney''s ghoulish predictions seriously?', 3.27, 'Harry Potter and the Prisoner of Azkaban');
+INSERT INTO books values (6,'Harry Potter is in his fourth year at Hogwarts. Harry wants to get away from the pernicious Dursleys and go to the Quidditch World Cup with Hermione, Ron, and the Weasleys. He wants to find out about the mysterious event to take place at Hogwarts this year, an event involving two other rival schools of magic, and a competition that hasn''t happened for hundreds of years. He wants to be a normal, fourteen-year-old wizard. But unfortunately for Harry Potter, he''s not normal - not even by Wizarding standards. And in his case, different can be deadly.', 4.2, 'Harry Potter and the Goblet of Fire');
+INSERT INTO books values (7,'Harry is in his fifth year at Hogwarts School as the adventures continue. There is a door at the end of a silent corridor. And it''s haunting Harry Potter''s dreams. Why else would he be waking in the middle of the night, screaming in terror? Harry has a lot on his mind for this, his fifth year at Hogwarts: a Defence Against the Dark Arts teacher with a personality like poisoned honey; a big surprise on the Gryffindor Quidditch team; and the looming terror of the Ordinary Wizarding Level exams.
+
+But all these things pale next to the growing threat of He-Who-Must-Not-Be-Named, one that neither the magical government nor the authorities at Hogwarts can stop. As the grasp of darkness tightens, Harry must discover the true depth and strength of his friends, the importance of boundless loyalty, and the shocking price of unbearable sacrifice. His fate depends on them all.
+
+The book that took the world by storm. In his fifth year at Hogwarts, Harry faces challenges at every turn, from the dark threat of He-Who-Must-Not-Be-Named and the unreliability of the government of the magical world to the rise of Ron Weasley as the Keeper of the Gryffindor Quidditch Team. Along the way he learns about the strength of his friends, the fierceness of his enemies, and the meaning of sacrifice.', 5.7, 'Harry Potter and the Order of the Phoenix');
+INSERT INTO books values (8,'Harry Potter and the Half-Blood Prince is the sixth novel in J. K. Rowling''s Harry Potter series. Set during Harry Potter''s sixth year at Hogwarts, Lord Voldemort is definitely back and with vengeance. Harry finds his world is yet again changing: wizards and witches and Muggles alike are dying, despite the efforts of the Ministry of Magic and the Order of the Phoenix. Despite the danger, Harry and his best friends, Ron and Hermione, return to the familiar life of Hogwarts for their sixth year. They find yet another Defence Against the Dark Arts teacher: Professor Snape. They begin their N.E.W.T. classes in preparation for life after Hogwarts, and Harry gets some much needed Potions help from the mysterious Half-Blood Prince. Quidditch is as popular as ever, Harry is nominated as Gryffindor Quidditch Captain.', 10.4, 'Harry Potter and the Half-Blood Prince');
+INSERT INTO books values (9,'The Deathly Hallows are three highly powerful magical objects supposedly created by Death and given to each of three brothers in the Peverell family. They consisted of the Elder Wand, an immensely powerful wand that was considered unbeatable; the Resurrection Stone, a stone which could summon the spirits of the dead, and the Cloak of Invisibility, which, as its name suggests, renders the user completely invisible. According to the story, both Antioch Peverell (owner of the Wand) and Cadmus Peverell (owner of the Stone) came to bad ends. However, Ignotus Peverell''s wisdom in requesting the Cloak was rewarded.', 5.5, 'Deathly Hallows');
+INSERT INTO books values (10,'David Caine inhabits a world of obsession, rich rewards, and rapid, destructive downfalls. A compulsive gambler and brilliant mathematician prone to crippling epileptic seizures, he possesses the uncanny ability to calculate odds of any hand in the blink of an eye. But one night at an underground poker club, Caine makes a costly mi scalculation, sending his life spinning out of control. Desperate, he agrees to test an experimental drug with unnerving side effects: inexplicable visions of the past, present, and future. Unsure whether he''s perceiving an alternate reality or suffering a psychotic breakdown, Caine embarks on a journey that stretches beyond the possible into the world of the improbable. Gradually, he discovers the extent of his astonishing new ability -- but powerful, shadowy forces know Caine''s secret. Now Caine must fight for his survival -- and his sanity . . .', 1.6, 'Improbable: A Novel');

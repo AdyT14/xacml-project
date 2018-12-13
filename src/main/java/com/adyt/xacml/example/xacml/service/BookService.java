@@ -9,4 +9,6 @@ public interface BookService {
     ResponseEntity<?> getBooks(HttpServletRequest request);
 
     ResponseEntity<?> getBooksByField(HttpServletRequest request);
+
+    ResponseEntity<?> getAllBooks();
 }

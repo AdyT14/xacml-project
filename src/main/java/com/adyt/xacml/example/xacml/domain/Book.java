@@ -1,9 +1,7 @@
 package com.adyt.xacml.example.xacml.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 import lombok.Data;
 
 import java.util.HashSet;
@@ -17,6 +15,7 @@ public class Book {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
 
+  @Lob
   private String description;
 
   private Double price;

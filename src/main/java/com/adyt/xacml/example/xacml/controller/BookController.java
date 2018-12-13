@@ -25,4 +25,9 @@ public class BookController {
     return bookService.getBooksByField(request);
   }
 
+  @GetMapping("/resource")
+  public ResponseEntity<?> getAllData(){
+    return bookService.getAllBooks();
+  }
+
 }
